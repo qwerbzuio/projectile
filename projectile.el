@@ -3636,7 +3636,8 @@ See `projectile-cleanup-known-projects'."
     (setq projectile-known-projects
           (delete-dups
            (cons (abbreviate-file-name project-root)
-                 projectile-known-projects)))))
+                 projectile-known-projects)))
+    (projectile-save-known-projects)))
 
 (defun projectile-load-known-projects ()
   "Load saved projects from `projectile-known-projects-file'.
